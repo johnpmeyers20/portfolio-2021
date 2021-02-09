@@ -154,7 +154,8 @@ header {
 
 .logo {
   /* png or svg would be great */
-  max-width: 100px;
+  display: inline;
+  max-width: 200px;
 }
 
 .nav {
