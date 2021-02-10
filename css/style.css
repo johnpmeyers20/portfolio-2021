@@ -356,10 +356,17 @@ header {
   box-shadow: var(--bs);
 }
 
+/* The media query's grid-template-columns property's 
+2nd value and the .section__subtitle--about selector's
+padding-right property are directly related and should
+both be changed in the event that modification is 
+necessary. The former adjusts the width of the picture
+and the ladder where the text may touch the picture */
+
 @media (min-width: 600px) {
   .about-me {
     display: grid;
-    grid-template-columns: 1fr 200px;
+    grid-template-columns: 1fr 300px;
     grid-template-areas:
       "title img"
       "subtitle img"
@@ -377,7 +384,7 @@ header {
     left: -1em;
     width: calc(100% + 2em);
     padding-left: 1em;
-    padding-right: calc(200px + 4em);
+    padding-right: calc(300px + 4em);
   }
   .about-me__img {
     grid-area: img;
