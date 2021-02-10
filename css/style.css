@@ -22,8 +22,8 @@
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
 
-  --bs: 0.25em 0.25em 0.75em rbga(0, 0, 0, 0.25) 0.125em 0.125em 0.25em
-    rgba(0, 0, 0, 0.15);
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 }
 
 @media (min-width: 800px) {
@@ -367,10 +367,11 @@ and the ladder where the text may touch the picture */
   .about-me {
     display: grid;
     grid-template-columns: 1fr 300px;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
       "title img"
       "subtitle img"
-      "text img";
+      "story img";
     grid-column-gap: 2em;
   }
 
@@ -378,6 +379,7 @@ and the ladder where the text may touch the picture */
     grid-area: title;
   }
   .section__subtitle--about {
+    grid-area: subtitle;
     grid-column: 1 / -1;
     grid-row: 2;
     position: relative;
@@ -386,11 +388,21 @@ and the ladder where the text may touch the picture */
     padding-left: 1em;
     padding-right: calc(300px + 4em);
   }
+
   .about-me__img {
     grid-area: img;
     position: relative;
     z-index: 2;
   }
+
+  .about-me__body {
+    grid-area: story;
+  }
+}
+
+.about-me-list {
+  padding-left: 1em;
+  margin-top: 0px;
 }
 
 /* My Portfolio */
