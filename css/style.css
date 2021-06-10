@@ -378,17 +378,13 @@ and the ladder where the text may touch the picture */
   }
 
   .about-me__img {
-    /* grid-area: img; */
     width: 300px;
     position: relative;
     float: right;
     margin-top: 0;
     margin-left: 15px;
+    margin-bottom: 15px;
     z-index: 2;
-  }
-
-  .about-me__body {
-    /* grid-area: story; */
   }
 }
 
