@@ -365,38 +365,26 @@ and the ladder where the text may touch the picture */
 
 @media (min-width: 600px) {
   .about-me {
-    display: grid;
-    grid-template-columns: 1fr 300px;
-    grid-template-rows: auto auto auto;
-    grid-template-areas:
-      "title img"
-      "subtitle img"
-      "story img";
-    grid-column-gap: 2em;
+    position: relative;
   }
 
-  .section__title--about {
-    grid-area: title;
-  }
   .section__subtitle--about {
-    grid-area: subtitle;
-    grid-column: 1 / -1;
-    grid-row: 2;
     position: relative;
     left: -1em;
     width: calc(100% + 2em);
     padding-left: 1em;
     padding-right: calc(300px + 4em);
+    z-index: 1;
   }
 
   .about-me__img {
-    grid-area: img;
+    width: 300px;
     position: relative;
+    float: right;
+    margin-top: 0;
+    margin-left: 15px;
+    margin-bottom: 15px;
     z-index: 2;
-  }
-
-  .about-me__body {
-    grid-area: story;
   }
 }
 
