@@ -352,6 +352,10 @@ header {
   margin: 0 auto;
 }
 
+.section__title.section__title--about {
+  margin-top: 1em;
+}
+
 .about-me__img {
   box-shadow: var(--bs);
 }
@@ -373,6 +377,10 @@ and the ladder where the text may touch the picture */
       "subtitle img"
       "story img";
     grid-column-gap: 2em;
+  }
+
+  .section__title.section__title--about {
+    margin-top: 0;
   }
 
   .section__title--about {
