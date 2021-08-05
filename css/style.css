@@ -387,6 +387,8 @@ and the ladder where the text may touch the picture */
 
   .about-me__img {
     width: 300px;
+    grid-column: 1/1;
+    grid-row: 2/3;
     position: relative;
     float: right;
     margin-top: 0;
